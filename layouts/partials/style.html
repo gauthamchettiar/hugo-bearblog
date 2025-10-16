@@ -1,8 +1,8 @@
 <style>
   :root {
     --width: 720px;
-    --font-main: Verdana, sans-serif;
-    --font-secondary: Verdana, sans-serif;
+    --font-main: Nimbus Sans L, sans-serif;
+    --font-secondary: Nimbus Sans L, sans-serif;
     --font-scale: 1em;
     --background-color: #fff;
     --heading-color: #222;
@@ -14,12 +14,13 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background-color: #01242e;
+      --background-color: #000000;
       --heading-color: #eee;
       --text-color: #ddd;
-      --link-color: #8cc2dd;
-      --visited-color: #8b6fcb;
+      --link-color: #e6ee5c;
+      --visited-color: #c83909;
       --blockquote-color: #ccc;
+      --blockquote-background-color: #212121;
     }
   }
 
@@ -97,12 +98,16 @@
   code {
     font-family: monospace;
     padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
     border-radius: 3px;
+    background-color: var(--blockquote-background-color, transparent);
   }
 
   blockquote {
     border-left: 1px solid #999;
     color: var(--blockquote-color);
+    background-color: var(--blockquote-background-color, transparent);
     padding-left: 20px;
     font-style: italic;
   }

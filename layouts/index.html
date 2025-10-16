@@ -4,7 +4,7 @@
 <b>Recent posts</b>    
 <ul class="blog-posts">
 {{ $slice := slice "blog" "code" }}
-{{ range ( where .Site.RegularPages "Type" "in" $slice ).ByDate.Reverse | first 5 }}
+{{ range ( where .Site.RegularPages "Type" "in" $slice ).ByDate.Reverse | first 25 }}
 <li>
     <time datetime='{{ .Date.Format "2006-01-02" }}'>
     {{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}
