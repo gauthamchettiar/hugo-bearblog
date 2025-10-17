@@ -1,0 +1,42 @@
+{{/* Wide Table Shortcode - Creates a responsive table that's wider than body content */}}
+
+<style>
+  /* Wide table - Excel-like borders */
+  .wide-table {
+    width: calc(100vw - 40px);
+    max-width: 900px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    overflow-x: auto;
+  }
+
+  .wide-table table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .wide-table table th,
+  .wide-table table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+  }
+
+  .wide-table table thead th {
+    background-color: var(--heading-color);
+    color: var(--background-color);
+    font-weight: bold;
+    opacity: 0.8;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .wide-table table th,
+    .wide-table table td {
+      border-color: #666;
+    }
+  }
+</style>
+
+<div class="wide-table">
+  {{ .Inner | markdownify}}
+</div>
